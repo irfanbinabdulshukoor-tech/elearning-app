@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-
+import "./firebase";
 function App() {
+  console.log("firebase connected faa");
   const [courses, setCourses] = useState([]);
   const [title, setTitle] = useState("");
   const [video, setVideo] = useState(null);
