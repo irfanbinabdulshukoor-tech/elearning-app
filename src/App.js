@@ -160,13 +160,14 @@ function App() {
                       {/* MULTI VIDEO DISPLAY */}
                       {course.videos && course.videos.map((vid, index) => (
                         <iframe
-                          key={index}
-                          width="100%"
-                          height="150"
-                          src={vid}
-                          style={{ marginBottom: "10px" }}
-                          allowFullScreen
-                        />
+  key={index}
+ title={`course-${course.id}-video-${index}`}
+  width="100%"
+  height="150"
+  src={vid}
+  style={{ marginBottom: "10px" }}
+  allowFullScreen
+/>
                       ))}
 
                       {/* NOTES */}
