@@ -74,9 +74,10 @@ function UserDashboard() {
               color: "white"
             }}>
 
+              {/* THUMBNAIL */}
               <img
                 src={course.thumbnail}
-                alt=""
+                alt="course thumbnail"
                 width="100%"
                 height="180"
               />
@@ -84,11 +85,12 @@ function UserDashboard() {
               <div style={{ padding: "10px" }}>
                 <h3>{course.title}</h3>
 
-                {/* 🔥 MULTI VIDEOS */}
+                {/* 🎥 MULTI VIDEOS */}
                 {course.videos && course.videos.map((vid, index) => (
                   <iframe
                     key={index}
                     src={vid}
+                    title={`course-${course.id}-video-${index}`}
                     width="100%"
                     height="150"
                     style={{ marginBottom: "10px" }}
@@ -96,7 +98,7 @@ function UserDashboard() {
                   ></iframe>
                 ))}
 
-                {/* 🔥 NOTES */}
+                {/* 📄 NOTES */}
                 {course.notes && (
                   <a
                     href={course.notes}
@@ -118,7 +120,7 @@ function UserDashboard() {
 
         </div>
 
-        {/* 🔥 NO RESULT */}
+        {/* ❌ NO RESULT */}
         {filteredCourses.length === 0 && (
           <p style={{ marginTop: "20px" }}>No courses found 😢</p>
         )}
