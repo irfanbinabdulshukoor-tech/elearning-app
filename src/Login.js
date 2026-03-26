@@ -54,7 +54,7 @@ function Login({ setIsLoggedIn, setRole }) {
         {/* ✅ FIXED HEADER */}
         <img
           src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png"
-          alt="logo"
+          alt="student"
           width="60"
         />
         <h2 style={{ margin: "10px 0" }}>E-Learn</h2>
